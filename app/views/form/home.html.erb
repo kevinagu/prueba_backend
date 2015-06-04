@@ -1,0 +1,23 @@
+<%= form_for current_user, url: form_path(current_user), html: { method: :put } do |f| %>
+  <p>
+    <%= f.label :Nombre %><br>
+    <%= f.text_field :name %>
+  </p>
+
+  <p>
+    <%= f.label :Apellido %><br>
+    <%= f.text_field :last_name %>
+  </p>
+  <p>
+    <%= f.label :Telefono %><br>
+    <%= f.telephone_field :phone %>
+  </p>
+  <p>
+    <%= f.label :Cumpleaños %><br>
+    <%= f.date_field :birthday %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
