@@ -17,3 +17,10 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+	$( "#sgnup" ).click(function() {
+  		$("#confirmation").show();
+  		console.log("joda");
+  		alert("Registra tu correo para confirmar tu cuenta.");
+	});
+
+	$('#phone').numeric();

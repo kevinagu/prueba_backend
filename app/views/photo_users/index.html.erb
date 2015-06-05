@@ -2,7 +2,7 @@
 
 
    
-
+<% if not @photo_users.empty? %>
   <tbody>
     <% @photo_users.each do |photo_user| %>
       <tr>
@@ -26,8 +26,9 @@
       </tr>
     <% end %>
   </tbody>
-
-
+<% else %>
+  <h4>No tienes fotos en tu album, presiona el boton "Agregar Foto" y escoge de tu galeria.</h4>
+<% end %>
 <br>
-
-<%= link_to 'New Photo user', new_photo_user_path %>
+<%= will_paginate @photo_users, renderer: BootstrapPagination::Rails %>
+<%= link_to 'Agregar Foto', new_photo_user_path, :class=>"button" %>

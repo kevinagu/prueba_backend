@@ -4,7 +4,7 @@ class PhotoUsersController < ApplicationController
   respond_to :html
 
   def index
-    @photo_users = current_user.album
+    @photo_users = current_user.album.page(params[:page])
     respond_with(@photo_users)
   end
 

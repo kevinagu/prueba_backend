@@ -15,7 +15,7 @@ class FormController < ApplicationController
   end
 
   def form_params
-      params.require(:user).permit(:name, :last_name, :phone, :birthday)
+      params.require(:user).permit(:name, :last_name, :email, :phone, :birthday)
 
   end
 

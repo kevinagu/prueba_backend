@@ -14,7 +14,6 @@
       <li class="has-dropdown">
         <a href="#"><%=current_user.email %></a>
         <ul class="dropdown">
-          <li><a href="#">First link in dropdown</a></li>
           <li class="active"><%= link_to "Cerrar Sesión", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %></li>
         </ul>
       </li>
@@ -22,7 +21,7 @@
 
     <!-- Left Nav Section -->
     <ul class="left">
-      <li><%=link_to "Fotos", photo_users_path %></li>
+      <li><%=link_to "Fotos de Perfil", photo_users_path %></li>
     </ul>
   </section>
 </nav>

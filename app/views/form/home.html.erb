@@ -8,9 +8,16 @@
     <%= f.label :Apellido %><br>
     <%= f.text_field :last_name %>
   </p>
+
+   <p>
+    <%= f.label :Correo %><br>
+    <%= f.text_field :email %>
+  </p>
+
   <p>
     <%= f.label :Telefono %><br>
-    <%= f.telephone_field :phone %>
+    <%= f.number_field :phone, :id=>"phone" %>
+ 
   </p>
   <p>
     <%= f.label :Cumpleaños %><br>
