@@ -12,4 +12,62 @@
  *
  *= require_tree .
  *= require_self
+ *= require foundation_and_overrides
+
  */
+body{
+	background: #E8E8E7;
+
+}
+
+#user-sesion h2{
+	text-align: center;
+}
+
+img{
+
+	height: 250px;
+	width: 250px;
+}
+
+.th{
+	width: 100%;
+}
+
+#profile h1 {
+	text-align: center;
+
+}
+
+#profile h3{
+	text-align: center;
+
+
+}
+
+#profile h4{
+	text-align: center;
+	color: orange;
+
+}
+
+#image-detail img{
+	margin: 100px auto;
+
+	height: 400px;
+	width: 100%;
+}
+.portrait{
+	height: 250%;
+	width: 25%;
+	margin: 0px;
+	float: left;
+}
+
+.options{
+	height: 60px;
+}
+
+footer{
+	margin-bottom: 0px;
+}

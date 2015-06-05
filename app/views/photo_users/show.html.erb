@@ -1,14 +1,7 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>User:</strong>
-  <%= @photo_user.user %>
-</p>
-
-<p>
-  <strong>Photo:</strong>
-  <%= @photo_user.photo %>
-</p>
+<div id="image-detail">
+  	<%= image_tag(@photo_user.photo_url, :width => 600) if @photo_user.photo.present? %>
+</div>
 
 <%= link_to 'Edit', edit_photo_user_path(@photo_user) %> |
 <%= link_to 'Back', photo_users_path %>

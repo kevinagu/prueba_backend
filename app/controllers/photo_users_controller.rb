@@ -4,7 +4,7 @@ class PhotoUsersController < ApplicationController
   respond_to :html
 
   def index
-    @photo_users = PhotoUser.all
+    @photo_users = current_user.album
     respond_with(@photo_users)
   end
 
@@ -21,7 +21,8 @@ class PhotoUsersController < ApplicationController
   end
 
   def create
-    @photo_user = PhotoUser.new(photo_user_params)
+
+    @photo_user = PhotoUser.new(:user_id=>current_user.id, :photo=>params[:photo_user][:photo])
     @photo_user.save
     respond_with(@photo_user)
   end

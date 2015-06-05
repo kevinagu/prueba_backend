@@ -1,0 +1,37 @@
+<div id="profile" class="row">
+  <div class="small-2 large-3 columns"><br></div>
+  <div class="small-4 large-6 columns">
+  	<div>
+    
+    <% if not current_user.name.nil? && current_user.last_name.nil? %>
+	    <h1>
+	      <%=current_user.name+' ' +current_user.last_name %>
+	    </h1>
+    <% else %>
+    	
+      <h3>Edita tu perfil para agregar un nombre</h3>
+    	
+    <% end %>
+     <h3>Mi numero telefonico es</h3>
+    <h4>
+      <%= current_user.phone %>
+    </h4>
+    <h3>Mi fecha de nacimiento es</h3>
+    <h4>
+
+      <%= current_user.birthday %>
+    </h4>
+    <div class="row">
+    	  <div class="small-2 large-3 columns"><br></div>
+  		  <div class="small-4 large-6 columns"><a class="button expand" href="/form/home">Editar Perfil</a></div>
+  		  <div class="small-6 large-3 columns"></div>
+    	
+
+    </div>
+</div>
+
+  </div>
+  <div class="small-6 large-3 columns"></div>
+</div>
+
+

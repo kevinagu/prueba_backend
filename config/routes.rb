@@ -9,9 +9,9 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
    root 'form#home'
-   resources :form, only: :update
+   resources :form, only: [:update, :show]
   # Example of regular route:
-  #   get 'products/:id' => 'catalog#view'
+    get 'user/profile' => 'form#show'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -32,10 +32,10 @@ Rails.application.routes.draw do
   #   end
 
   # Example resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
+     resources :users do
+       resources :photo_users
   #     resource :seller
-  #   end
+     end
 
   # Example resource route with more complex sub-resources:
   #   resources :products do
